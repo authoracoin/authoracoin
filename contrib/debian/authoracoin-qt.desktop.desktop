@@ -1,0 +1,11 @@
+[Desktop Entry]
+Encoding=UTF-8
+Name=Authoracoin
+Comment=Authoracoin P2P Cryptocurrency
+Exec=authoracoin-qt %u
+Terminal=false
+Type=Application
+Icon=authoracoin128
+MimeType=x-scheme-handler/authoracoin;
+Categories=Office;Finance;
+Name[en_US]=authoracoin-qt.desktop

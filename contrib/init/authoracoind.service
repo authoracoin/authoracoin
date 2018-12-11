@@ -1,0 +1,26 @@
+[Unit]
+Description=Authoracoin's distributed currency daemon
+After=network.target
+
+[Service]
+User=authoracoin
+Group=authoracoin
+
+Type=forking
+PIDFile=/var/lib/authoracoind/authoracoind.pid
+
+ExecStart=/usr/bin/authoracoind -daemon -pid=/var/lib/authoracoind/authoracoind.pid \
+          -conf=/etc/authoracoin/authoracoin.conf -datadir=/var/lib/authoracoind
+
+ExecStop=-/usr/bin/authoracoin-cli -conf=/etc/authoracoin/authoracoin.conf \
+         -datadir=/var/lib/authoracoind stop
+
+Restart=always
+PrivateTmp=true
+TimeoutStopSec=60s
+TimeoutStartSec=2s
+StartLimitInterval=120s
+StartLimitBurst=5
+
+[Install]
+WantedBy=multi-user.target
