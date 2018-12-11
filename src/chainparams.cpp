@@ -153,10 +153,11 @@ public:
         assert(genesis.hashMerkleRoot == uint256("0x6852e9739b92effcd33d6c5f6d94fa672471093fbedfee3769028780876e62f9"));
 
         // DNS Seeding
-        vSeeds.push_back(CDNSSeedData("seed1.authoracoin.com", "seed1.authoracoin.com"));
+        vSeeds.push_back(CDNSSeedData("authoracoin.com", "dnsseed.authoracoin.com"));
+	vSeeds.push_back(CDNSSeedData("seed1.authoracoin.com", "seed1.authoracoin.com"));
         vSeeds.push_back(CDNSSeedData("seed2.authoracoin.com", "seed2.authoracoin.com"));
-		vSeeds.push_back(CDNSSeedData("seed3.authoracoin.com", "seed3.authoracoin.com"));
-		vSeeds.push_back(CDNSSeedData("seed4.authoracoin.com", "seed4.authoracoin.com"));
+	vSeeds.push_back(CDNSSeedData("seed3.authoracoin.com", "seed3.authoracoin.com"));
+	vSeeds.push_back(CDNSSeedData("seed4.authoracoin.com", "seed4.authoracoin.com"));
 
         // Authoracoin addresses start with 'A'
         base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1, 23);
