@@ -1,5 +1,5 @@
 ---
-name: "authoracoin-osx-1.0.3.0"
+name: "authoracoin-osx-1.0.4.0"
 enable_cache: true
 suites:
 - "trusty"
