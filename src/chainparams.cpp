@@ -120,6 +120,9 @@ public:
         /** Height or Time Based Activations **/
         nLastPOWBlock = 300;
         nModifierUpdateBlock = 1; // we use the version 2 for ATHR
+		
+		nEnforceNewSporkKey = 1546953729; //!> Sporks signed after (GMT): Tuesday, 08-Jan-19 13:22:09 UTC must use the new spork key
+        nRejectOldSporkKey = 1548806400; //!> Fully reject old spork key after (GMT): Wednesday, 30-Jan-19 00:00:00 UTC
 
         /**
         python ~/GenesisH0new/genesis.py -a quark-hash -z "Poloniex exchange have launched their official trading app for iOS and Android" -t 1538474400 -p 042f8d34b56ecc2833ab4117a9a1d60cc16f2bdbaea320de00a4d32d0e1ca63466127d844f8a633817f1cab201f86aeb572284351fd0757dbf65cc6aad7fae8f76 -v 0
@@ -155,10 +158,10 @@ public:
 
         // DNS Seeding
         vSeeds.push_back(CDNSSeedData("authoracoin.com", "dnsseed.authoracoin.com"));
-	vSeeds.push_back(CDNSSeedData("seed1.authoracoin.com", "seed1.authoracoin.com"));
+        vSeeds.push_back(CDNSSeedData("seed1.authoracoin.com", "seed1.authoracoin.com"));
         vSeeds.push_back(CDNSSeedData("seed2.authoracoin.com", "seed2.authoracoin.com"));
-	vSeeds.push_back(CDNSSeedData("seed3.authoracoin.com", "seed3.authoracoin.com"));
-	vSeeds.push_back(CDNSSeedData("seed4.authoracoin.com", "seed4.authoracoin.com"));
+        vSeeds.push_back(CDNSSeedData("seed3.authoracoin.com", "seed3.authoracoin.com"));
+        vSeeds.push_back(CDNSSeedData("seed4.authoracoin.com", "seed4.authoracoin.com"));
 
         // Authoracoin addresses start with 'A'
         base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1, 23);
@@ -185,7 +188,8 @@ public:
         fHeadersFirstSyncingActive = false;
 
         nPoolMaxTransactions = 3;
-        strSporkKey = "049a19348282ff6c354f769301a702dabb1c8d2e46e1af12b15ed681204b034bc7eee1610e4af8a6821e4f064049d0883d5ace467ac50f063633e22719c1c2e297";
+        strSporkKey = "04FB8BC961A2533634C5905CF9C6D3E82DA2DAF82AD113FF8DC5B92F9EF0F2764D822C050C9E86FE557E62C29ACF8C5B06EB2A920B2B5D7CB8E79AE11D726003CD";
+		strSporkKeyOld = "049a19348282ff6c354f769301a702dabb1c8d2e46e1af12b15ed681204b034bc7eee1610e4af8a6821e4f064049d0883d5ace467ac50f063633e22719c1c2e297";
         strMasternodePoolDummyAddress = "AHcqNBVGqc9XXuzvSbVj4ffPDNfefDG2wy";
         nStartMasternodePayments = genesis.nTime + 14400; // 4 hours after genesis creation
 
