@@ -195,7 +195,7 @@ bool CSporkManager::CheckSignature(CSporkMessage& spork)
     CPubKey pubkeynew(ParseHex(Params().SporkKey()));
     std::string errorMessage = "";
 
-    bool fValidWithNewKey = obfuScationSigner.VerifyMessage(pubkeynew, spork.vchSig,strMessage, errorMessage);
+    bool fValidWithNewKey = masternodeSigner.VerifyMessage(pubkeynew, spork.vchSig,strMessage, errorMessage);
 
     if (fCheckSigner && !fValidWithNewKey)
         return false;
@@ -203,7 +203,7 @@ bool CSporkManager::CheckSignature(CSporkMessage& spork)
     // See if window is open that allows for old spork key to sign messages
     if (!fValidWithNewKey && GetAdjustedTime() < Params().RejectOldSporkKey()) {
         CPubKey pubkeyold(ParseHex(Params().SporkKeyOld()));
-        return obfuScationSigner.VerifyMessage(pubkeyold, spork.vchSig, strMessage, errorMessage);
+        return masternodeSigner.VerifyMessage(pubkeyold, spork.vchSig, strMessage, errorMessage);
     }
 
     return fValidWithNewKey;
