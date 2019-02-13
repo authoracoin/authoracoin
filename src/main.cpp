@@ -5287,7 +5287,7 @@ bool static ProcessMessage(CNode* pfrom, string strCommand, CDataStream& vRecv, 
 int ActiveProtocol()
 {
 
-    // SPORK_14 was used for 70918. Nodes < 70918 don't see it and still get their protocol version
+    // SPORK_14 was used for 70919. Nodes < 70919 don't see it and still get their protocol version
 
      if (IsSporkActive(SPORK_14_NEW_PROTOCOL_ENFORCEMENT))
             return MIN_PEER_PROTO_VERSION_AFTER_ENFORCEMENT;

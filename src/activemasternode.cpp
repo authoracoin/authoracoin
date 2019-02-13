@@ -1,7 +1,7 @@
 // Copyright (c) 2014-2016 The Dash developers
 // Copyright (c) 2015-2017 The PIVX developers
 // Copyright (c) 2017-2018 The Bitcoin Green developers
-// Copyright (c) 2018 The Authoracoin developers
+// Copyright (c) 2018-2019 The Authoracoin developers
 // Distributed under the MIT/X11 software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -391,7 +391,7 @@ vector<COutput> CActiveMasternode::SelectCoinsMasternode()
 
     // Filter
     for (const COutput& out : vCoins) {
-        if (out.tx->vout[out.i].nValue == GetMNCollateral(chainActive.Height()) * COIN)
+        if (out.tx->vout[out.i].nValue == GetMNCollateral(chainActive.Height()) * COIN || out.tx->vout[out.i].nValue == GetMNCollateral1(chainActive.Height()) * COIN)
             filteredCoins.push_back(out);
     }
     return filteredCoins;

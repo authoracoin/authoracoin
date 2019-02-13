@@ -58,12 +58,19 @@ struct CNodeStateStats;
 
 inline int64_t GetMNCollateral(int nHeight) {
 
-	if (nHeight < 200000) {
+	if (nHeight < 225000) {
 		return 5000;
-	} else if (nHeight >= 200000 && nHeight < 300000) {
+	} else if (nHeight >= 225000) {
 		return 50000;
-	} else if (nHeight >= 300000) {
-		return 100000;
+	}
+}
+
+inline int64_t GetMNCollateral1(int nHeight) {
+
+	if (nHeight < 226500) {
+		return 5000;
+	} else if (nHeight >= 226500) {
+		return 50000;
 	}
 }
 /** Default for -blockmaxsize and -blockminsize, which control the range of sizes the mining code will create **/

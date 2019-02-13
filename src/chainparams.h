@@ -3,7 +3,7 @@
 // Copyright (c) 2014-2015 The Dash developers
 // Copyright (c) 2015-2017 The PIVX Core developers
 // Copyright (c) 2017-2018 The Bitcoin Green developers
-// Copyright (c) 2018 The Authoracoin developers
+// Copyright (c) 2018-2019 The Authoracoin developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -96,9 +96,6 @@ public:
 	
 	/** Spork key and Masternode Handling **/
     std::string SporkKey() const { return strSporkKey; }
-	std::string SporkKeyOld() const { return strSporkKeyOld; }
-	int64_t NewSporkStart() const { return nEnforceNewSporkKey; }
-    int64_t RejectOldSporkKey() const { return nRejectOldSporkKey; }
     std::string MasternodePoolDummyAddress() const { return strMasternodePoolDummyAddress; }
     int64_t StartMasternodePayments() const { return nStartMasternodePayments; }
     int64_t Budget_Fee_Confirmations() const { return nBudget_Fee_Confirmations; }
@@ -143,9 +140,6 @@ protected:
     bool fHeadersFirstSyncingActive;
     int nPoolMaxTransactions;
     std::string strSporkKey;
-	std::string strSporkKeyOld;
-    int64_t nEnforceNewSporkKey;
-    int64_t nRejectOldSporkKey;
     std::string strMasternodePoolDummyAddress;
     int64_t nStartMasternodePayments;
     int64_t nBudget_Fee_Confirmations;

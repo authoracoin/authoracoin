@@ -1,4 +1,4 @@
-Bitcoin Green Core version 1.3.0 is now available from:
+AuthoraCoin Core version 1.0.0 is now available from:
 
   <https://github.com/authoracoin/authoracoin/releases>
 
@@ -16,7 +16,7 @@ If you are running an older version, shut it down. Wait until it has completely 
 Compatibility
 ==============
 
-Bitcoin Green Core is extensively tested on multiple operating systems using
+AuthoraCoin Core is extensively tested on multiple operating systems using
 Linux, macOS 10.10+, and Windows 7 and later.
 
 Change log

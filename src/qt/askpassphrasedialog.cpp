@@ -129,7 +129,7 @@ void AskPassphraseDialog::accept()
                 if (model->setWalletEncrypted(true, newpass1)) {
                     QMessageBox::warning(this, tr("Wallet encrypted"),
                         "<qt>" +
-                            tr("Bitcoin Green will close now to finish the encryption process. "
+                            tr("AuthoraCoin will close now to finish the encryption process. "
                                "Remember that encrypting your wallet cannot fully protect "
                                "your ATHRs from being stolen by malware infecting your computer.") +
                             "<br><br><b>" +

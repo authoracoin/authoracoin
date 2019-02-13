@@ -121,9 +121,6 @@ public:
         nLastPOWBlock = 300;
         nModifierUpdateBlock = 1; // we use the version 2 for ATHR
 		
-		nEnforceNewSporkKey = 1546953729; //!> Sporks signed after (GMT): Tuesday, 08-Jan-19 13:22:09 UTC must use the new spork key
-        nRejectOldSporkKey = 1548806400; //!> Fully reject old spork key after (GMT): Wednesday, 30-Jan-19 00:00:00 UTC
-
         /**
         python ~/GenesisH0new/genesis.py -a quark-hash -z "Poloniex exchange have launched their official trading app for iOS and Android" -t 1538474400 -p 042f8d34b56ecc2833ab4117a9a1d60cc16f2bdbaea320de00a4d32d0e1ca63466127d844f8a633817f1cab201f86aeb572284351fd0757dbf65cc6aad7fae8f76 -v 0
 		algorithm: quark-hash
@@ -189,7 +186,6 @@ public:
 
         nPoolMaxTransactions = 3;
         strSporkKey = "04FB8BC961A2533634C5905CF9C6D3E82DA2DAF82AD113FF8DC5B92F9EF0F2764D822C050C9E86FE557E62C29ACF8C5B06EB2A920B2B5D7CB8E79AE11D726003CD";
-		strSporkKeyOld = "049a19348282ff6c354f769301a702dabb1c8d2e46e1af12b15ed681204b034bc7eee1610e4af8a6821e4f064049d0883d5ace467ac50f063633e22719c1c2e297";
         strMasternodePoolDummyAddress = "AHcqNBVGqc9XXuzvSbVj4ffPDNfefDG2wy";
         nStartMasternodePayments = genesis.nTime + 14400; // 4 hours after genesis creation
 
@@ -264,7 +260,7 @@ public:
         fTestnetToBeDeprecatedFieldRPC = true;
 
         nPoolMaxTransactions = 2;
-        strSporkKey = "040d285ec5c08935c66562107d3752e8cff58248f9ba6d6dfe9d803cad0128dab507644fc44e9dfecb373b2ea23b069c8bef5b9966b73a669463cf2a14821bbec1";
+        strSporkKey = "04FB8BC961A2533634C5905CF9C6D3E82DA2DAF82AD113FF8DC5B92F9EF0F2764D822C050C9E86FE557E62C29ACF8C5B06EB2A920B2B5D7CB8E79AE11D726003CD";
         strMasternodePoolDummyAddress = "AHcqNBVGqc9XXuzvSbVj4ffPDNfefDG2wy";
         nStartMasternodePayments = genesis.nTime + 14400; // 4 hours after genesis
         nBudget_Fee_Confirmations = 3; // Number of confirmations for the finalization fee. We have to make this very short
