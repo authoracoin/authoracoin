@@ -14,7 +14,7 @@ More information at [http://authoracoin.com](http://authoracoin.com)
 | **Name** | **Specs**  |
 |------------------|------------------|
 | Coin Type                   | POS & MN      |
-| Masternode Collateral       | 5000 ATHR      |
+| Masternode Collateral       | 50000 ATHR      |
 | Block Time                  | 60 Seconds    |
 | Maturation Time             | 30 Blocks     |
 | Min Stake Age               | 1 hour        |
